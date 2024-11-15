@@ -7,7 +7,7 @@
 
  <style>
   #map { 
-    width: 500px;
+    width: 100%;
   height: 600px; }
  </style>
  
@@ -20,13 +20,13 @@ var map = L.map('map').
 setView([41.66, -4.72], 
 14);
  
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://api.maptiler.com/maps/outdoor-v2/{z}/{x}/{y}.png?key=63yDuvzBzVrcN0AwsMyK', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
     maxZoom: 18
 }).addTo(map);
 
 L.control.scale().addTo(map);
-L.marker([41.66, -4.71], {draggable: true}).addTo(map);
+L.marker([17.55199663148427, -99.50135225024998], {draggable: true}).addTo(map);
 
  </script>
  </body> 
