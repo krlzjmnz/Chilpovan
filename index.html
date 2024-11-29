@@ -1,79 +1,191 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<base target="_top">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Quick Start - Leaflet</title>
-	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 400px;
-			width: 100%;
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
-
-	
-</head>
-<body>
-
-<div id="map" style="width: 100%; height: 400px;"></div>
-<script>
-
-	const map = L.map('map').setView([51.505, -0.09], 13);
-
-	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(map);
-
-	const marker = L.marker([51.5, -0.09]).addTo(map)
-		.bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
-
-	const circle = L.circle([51.508, -0.11], {
-		color: 'red',
-		fillColor: '#f03',
-		fillOpacity: 0.5,
-		radius: 500
-	}).addTo(map).bindPopup('I am a circle.');
-
-	const polygon = L.polygon([
-		[51.509, -0.08],
-		[51.503, -0.06],
-		[51.51, -0.047]
-	]).addTo(map).bindPopup('I am a polygon.');
-
-
-	const popup = L.popup()
-		.setLatLng([51.513, -0.09])
-		.setContent('I am a standalone popup.')
-		.openOn(map);
-
-	function onMapClick(e) {
-		popup
-			.setLatLng(e.latlng)
-			.setContent(`You clicked the map at ${e.latlng.toString()}`)
-			.openOn(map);
-	}
-
-	map.on('click', onMapClick);
-
-</script>
-
-
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/write.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development Tools</title>
+    <meta
+      name="description"
+      conten="Accede a más de 10 herramientas gratuitas de diseño y desarrollo"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://autonomo-7e183.web.app/" />
+    <meta
+      property="og:title"
+      content="Development Tools | Herramientas para desarrolladores y diseñadores"
+    />
+    <meta
+      property="og:description"
+      content="Accede a más de 10 herramientas gratuitas de diseño y desarrollo"
+    />
+    <meta property="og:image" content="https://i.imgur.com/OPdatpV.png" />
+    <meta name="”twitter:card”" content="”summary" with large image” />
+    <meta
+      name="twitter:title"
+      content="Herramientas para desarrolladores y diseñadores"
+    />
+    <meta name="twitter:url" content="https://autonomo-7e183.web.app/" />
+    <meta
+      name="twitter:description"
+      content="Accede a más de 10 herramientas gratuitas de diseño y desarrollo"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/OPdatpV.png" />
+  </head>
+  <body>
+    <nav
+      class="max-w-7xl w-[90%] md:full mx-auto flex justify-between h-20 items-center"
+    >
+      <span>Development Tools</span>
+      <div class="gap-6 hidden md:flex">
+        <p>Acerca de</p>
+        <p>Servicios</p>
+        <p>Blog</p>
+      </div>
+      <div class="flex gap-4">
+        <button class="bg-black text-white h-10 w-[120px] rounded-lg">
+          Contactamos
+        </button>
+        <img class="block md:hidden w-8" src="/menus.svg" />
+      </div>
+    </nav>
+    <section
+      class="flex items-center justify-center text-center min-h-screen w-[90%] mx-auto md:w-full"
+    >
+      <div>
+        <img class="mx-auto mb-[32px]" src="/freelancer.png" />
+        <h1 class="text-4xl md:text-[64px]">Prueba Fast Testing</h1>
+        <p class="text-2xl md:text-[32px] text-gray font-[200] mt-6">
+          Nuestra nueva herramienta para pruebas de usabilidad
+        </p>
+      </div>
+    </section>
+    <section class="bg-black py-20">
+      <div class="max-w-7xl mx-auto w-[90%]">
+        <h2 class="text-3xl md:text-4xl text-white">
+          Desarrollamos productos que funcionan
+        </h2>
+        <p class="text-xl md:text-2xl text-grayLight mt-6 font-light">
+          Lorem ipsum dolor sit amet consectetur. Massa sed in in id. . Massa
+          sed in in id.
+        </p>
+        <div
+          class="mt-16 md:mt-20 flex-wrap lg:flex-nowrap flex justify-center md:justify-between gap-10"
+        >
+          <div
+            class="flex flex-col gap-4 bg-[#232323] py-8 px-6 rounded-2xl w-[272px]"
+          >
+            <span class="text-4xl">💡</span>
+            <h3 class="text-white text-2xl">Aplicaciones web y móviles</h3>
+            <p class="text-lg text-grayLight font-light">
+              Lorem ipsum dolor sit amet consectetur. Massa sed in in id. .
+              Massa sed in in id.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 bg-[#232323] py-8 px-6 rounded-2xl w-[272px]"
+          >
+            <span class="text-4xl">💡</span>
+            <h3 class="text-white text-2xl">Aplicaciones web y móviles</h3>
+            <p class="text-lg text-grayLight">
+              Lorem ipsum dolor sit amet consectetur. Massa sed in in id. .
+              Massa sed in in id.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 bg-[#232323] py-8 px-6 rounded-2xl w-[272px]"
+          >
+            <span class="text-4xl">💡</span>
+            <h3 class="text-white text-2xl">Aplicaciones web y móviles</h3>
+            <p class="text-lg text-grayLight">
+              Lorem ipsum dolor sit amet consectetur. Massa sed in in id. .
+              Massa sed in in id.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-4 bg-[#232323] py-8 px-6 rounded-2xl w-[272px]"
+          >
+            <span class="text-4xl">💡</span>
+            <h3 class="text-white text-2xl">Aplicaciones web y móviles</h3>
+            <p class="text-lg text-grayLight">
+              Lorem ipsum dolor sit amet consectetur. Massa sed in in id. .
+              Massa sed in in id.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto py-[120px]">
+      <h2 class="text-3xl md:text-4xl text-center">CONOCE AL EQUIPO</h2>
+      <div class="mt-20 flex flex-wrap lg:flex-nowrap justify-around">
+        <div class="text-center w-[200px]">
+          <img
+            class="w-[160px] h-[160px] rounded-full object-cover mx-auto"
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <h3 class="mt-4 mb-1 text-2xl">Alma Islas</h3>
+          <p class="text-gray font-light">Co-founder & Software Engineer</p>
+        </div>
+        <div class="text-center w-[200px]">
+          <img
+            class="w-[160px] h-[160px] rounded-full object-cover mx-auto"
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <h3 class="mt-4 mb-1 text-2xl">Alma Islas</h3>
+          <p class="text-gray font-light">Co-founder & Software Engineer</p>
+        </div>
+        <div class="text-center w-[200px]">
+          <img
+            class="w-[160px] h-[160px] rounded-full object-cover mx-auto"
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <h3 class="mt-4 mb-1 text-2xl">Alma Islas</h3>
+          <p class="text-gray font-light">Co-founder & Software Engineer</p>
+        </div>
+        <div class="text-center w-[200px]">
+          <img
+            class="w-[160px] h-[160px] rounded-full object-cover mx-auto"
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+          <h3 class="mt-4 mb-1 text-2xl">Alma Islas</h3>
+          <p class="text-gray font-light">Co-founder & Software Engineer</p>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-wrap md:flex-nowrap">
+      <div class="bg-black w-full md:w-[50%] py-20 pr-10 pl-[15%]">
+        <img src="/write.png" />
+        <h3 class="text-[24px] md:text-[32px] text-grayLight">
+          “Lorem ipsum dolor sit amet consectetur. Massa sed in in id. . Massa
+          sed in in id. Massa sed in in id.”
+        </h3>
+        <h4 class="text-[#6E6E6E] text-lg">Ryan reynolds cO-FOUNDER tULLYS</h4>
+      </div>
+      <div class="bg-grayLight w-full md:w-[50%] pr-[15%] pl-10">
+        <img src="/working.png" />
+      </div>
+    </section>
+    <section
+      class="max-w-7xl w-[90%] md:w-full mx-auto flex flex-wrap md:flex-nowrap justify-between py-[120px]"
+    >
+      <div class="w-full md:w-[50%] pr-10">
+        <h3 class="text-4xl text-black">Escríbenos.</h3>
+        <p class="text-2xl mt-6 font-light text-gray">
+          Nos encantaría saber más sobre ti y lo que podemos diseñar y construir
+          juntos.
+        </p>
+        <div class="mt-20 group cursor-pointer">
+          <p class="text-gray">Trabaja con nosotros</p>
+          <p class="text-2xl mt-3">hola@designtools.com</p>
+          <div class="bg-[#BDC4D1] h-[2px] w-[240px] mt-2">
+            <div
+              class="bg-black w-0 h-[2px] group-hover:w-[240px] animation"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10 w-full md:w-[50%]"></div>
+    </section>
+  </body>
 </html>

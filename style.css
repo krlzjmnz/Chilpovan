@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Universal Sans";
+  src: url(/fonts/UniversaSans.ttf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Universal Sans";
+}
+
+.animation {
+  transition: all 1s ease;
+}
